@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Phone Store — Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html" class="header-logo">
+            <img src="fm.png" alt="FM Phone Store">
+        </a>
+        <nav class="desktop-nav">
+            <a href="inicio.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html" class="active">Contato</a>
+        </nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="inicio.html">🏠 Início</a>
+        <a href="produtos.html">📱 Produtos</a>
+        <a href="contato.html" class="active">📞 Contato</a>
+    </div>
+
+    <main>
+        <div class="contato-hero">
+            <div class="hero-badge">✦ Fale Conosco</div>
+            <h2>Entre em <span style="color:var(--orange)">Contato</span></h2>
+            <p style="color:var(--gray); margin-top: 8px;">Estamos disponíveis para te atender!</p>
+        </div>
+
+        <div class="contato-cards">
+            <a href="https://wa.me/5588981882067" target="_blank" class="contato-card whatsapp">
+                <div class="contato-icon">💬</div>
+                <div class="contato-text">
+                    <h3>WhatsApp</h3>
+                    <p>(88) 98188-2067 — Fale agora</p>
+                </div>
+                <span class="contato-arrow">→</span>
+            </a>
+
+            <a href="https://www.instagram.com/fmphonestore?igsh=bndwamQ0MjJwY3cz" target="_blank" class="contato-card instagram">
+                <div class="contato-icon">📸</div>
+                <div class="contato-text">
+                    <h3>Instagram</h3>
+                    <p>@fmphonestore — Siga a gente</p>
+                </div>
+                <span class="contato-arrow">→</span>
+            </a>
+        </div>
+
+        <div style="text-align:center; margin-top: 48px; color: var(--gray); font-size: 0.85rem;">
+            <p>📍 Atendimento online</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>FM <span>PHONE STORE</span></p>
+    </footer>
+
+    <script>
+        function toggleMenu(){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            m.classList.toggle('open');
+            h.classList.toggle('open');
+        }
+        document.addEventListener('click', function(e){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            if(!m.contains(e.target)&&!h.contains(e.target)){
+                m.classList.remove('open');
+                h.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

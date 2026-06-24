@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Phone Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html" class="header-logo">
+            <img src="fm.png" alt="FM Phone Store">
+        </a>
+        <nav class="desktop-nav">
+            <a href="inicio.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="inicio.html">🏠 Início</a>
+        <a href="produtos.html">📱 Produtos</a>
+        <a href="contato.html">📞 Contato</a>
+    </div>
+
+    <main>
+        <div style="text-align:center; padding: 80px 16px;">
+            <p style="color:var(--gray);">Redirecionando...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>FM <span>PHONE STORE</span></p>
+    </footer>
+
+    <script>
+        window.location.href = 'inicio.html';
+        function toggleMenu(){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            m.classList.toggle('open');
+            h.classList.toggle('open');
+        }
+        document.addEventListener('click', function(e){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            if(!m.contains(e.target)&&!h.contains(e.target)){
+                m.classList.remove('open');
+                h.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

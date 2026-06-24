@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Phone Store — Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html" class="header-logo">
+            <img src="fm.png" alt="FM Phone Store">
+        </a>
+        <nav class="desktop-nav">
+            <a href="inicio.html">Início</a>
+            <a href="produtos.html" class="active">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="inicio.html">🏠 Início</a>
+        <a href="produtos.html" class="active">📱 Produtos</a>
+        <a href="contato.html">📞 Contato</a>
+    </div>
+
+    <main>
+        <!-- CELULARES -->
+        <div class="produtos-section">
+            <div class="section-header">
+                <span class="section-label">📱 Smartphones</span>
+                <h2>Celulares</h2>
+            </div>
+
+            <div class="scroll-row" id="celularesRow">
+                <!-- Placeholder cards — substitua pelas suas imagens! -->
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/POCO C71.jpg"></div>
+                    <div class="product-info">
+                        <h4>POCO C71</h4>
+                        <p>Promoção - 1000$</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/POCO C85.jpg"></div>
+                    <div class="product-info">
+                        <h4>POCO C85</h4>
+                        <p>Promoção - 1300$</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/POCO X7.jpg"></div>
+                    <div class="product-info">
+                        <h4>POCO X7</h4>
+                        <p>Promoção - 1970$</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/REALME C100i.jpg"></div>
+                    <div class="product-info">
+                        <h4>REALME C100i</h4>
+                        <p>Promoção - 1550$</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/REALME C75.jpg"></div>
+                    <div class="product-info">
+                        <h4>REALME C75</h4>
+                        <p>Promoção - 1600$</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/note70.jpg"></div>
+                    <div class="product-info">
+                        <h4>REALME Note 70</h4>
+                        <p>Promoção - 1300$</p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/REDMI 15C.jpg"></div>
+                    <div class="product-info">
+                        <h4>Redmi 15C</h4>
+                        <p>Promoção - 1250$</p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/REDMI NOTE 15.jpg"></div>
+                    <div class="product-info">
+                        <h4>Redmi Note 15</h4>
+                        <p>Promoção - 1650$</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ACESSÓRIOS -->
+        <div class="produtos-section">
+            <div class="section-header">
+                <span class="section-label">🎧 Acessórios</span>
+                <h2>Acessórios</h2>
+            </div>
+
+            <div class="scroll-row" id="acessoriosRow">
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/RELOGIO IMENSO AMOLED.jpg"></div>
+                    <div class="product-info">
+                        <h4>Relogio Imenso Amoled</h4>
+                        <p>Promoção - 320$</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-placeholder"><img src="img/RECEPTOR HIGHTV.jpg"></div>
+                    <div class="product-info">
+                        <h4>Receptor Hightv</h4>
+                        <p>Promoção - 530$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 32px; padding: 24px; background: var(--card); border-radius: 16px; border: 1px solid var(--border);">
+            <p style="color: var(--gray); font-size: 0.9rem;">
+                💬 Tem interesse em algum produto? <a href="contato.html" style="color: var(--orange); text-decoration: none; font-weight: 600;">Fale conosco pelo WhatsApp!</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>FM <span>PHONE STORE</span></p>
+    </footer>
+
+    <script>
+        function toggleMenu(){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            m.classList.toggle('open');
+            h.classList.toggle('open');
+        }
+        document.addEventListener('click', function(e){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            if(!m.contains(e.target)&&!h.contains(e.target)){
+                m.classList.remove('open');
+                h.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Phone Store — Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html" class="header-logo">
+            <img src="fm.png" alt="FM Phone Store">
+        </a>
+        <nav class="desktop-nav">
+            <a href="inicio.html" class="active">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="inicio.html" class="active">🏠 Início</a>
+        <a href="produtos.html">📱 Produtos</a>
+        <a href="contato.html">📞 Contato</a>
+    </div>
+
+    <main>
+        <div class="hero">
+            <div class="hero-badge">✦ Celulares &amp; Acessórios</div>
+            <h1>Qualidade, confiança e<br><span>tecnologia</span> em um só lugar</h1>
+            <p>Os melhores smartphones e acessórios com preço justo e atendimento de qualidade.</p>
+            <a href="produtos.html" class="hero-cta">Ver produtos →</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Realme</h3>
+                <p>Aparelhos modernos, potentes e com design inovador</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Xiaomi</h3>
+                <p>Aparelhos com excelente custo-beneficio</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Tabuleiro do Norte</h3>
+                <p>Perto de você</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Suporte</h3>
+                <p>Atendimento pelo WhatsApp</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>FM <span>PHONE STORE</span></p>
+    </footer>
+
+    <script>
+        function toggleMenu(){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            m.classList.toggle('open');
+            h.classList.toggle('open');
+        }
+        document.addEventListener('click', function(e){
+            const m=document.getElementById('mobileMenu');
+            const h=document.querySelector('.hamburger');
+            if(!m.contains(e.target)&&!h.contains(e.target)){
+                m.classList.remove('open');
+                h.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
