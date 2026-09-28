@@ -1,2 +1,2 @@
 # fm-phone-store
-Um site simples para a loja da minha familia
+Responsive website developed for a family mobile phone store, using HTML and CSS and published via GitHub Pages
